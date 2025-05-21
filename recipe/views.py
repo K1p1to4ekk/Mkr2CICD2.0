@@ -1,7 +1,4 @@
-from django.shortcuts import render
-from .models import Category
+from django.http import HttpResponse
 
-
-def main(request):
-    categories = Category.objects.all()
-    return render(request, 'main.html', context={'categories': categories})
+def index(request):
+    return HttpResponse("Welcome to the Recipe app!")
